@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "57ae96bb-7f27-4ee0-919f-80dbf9fdd98f",
+		"name": "DroneServiceDemo_01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40494208"
+	},
+	"item": [
+		{
+			"name": "CheckBatteryCapacity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/droneservice/checkdbattery/H123457",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"droneservice",
+						"checkdbattery",
+						"H123457"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\": \"C1234569\",\r\n    \"model\": \"MiddleWeight\",\r\n    \"maxWeightLimit\": 500,\r\n    \"batteryCapacity\": 60,\r\n    \"state\": \"LOADED\"\r\n}\r\n\r\n{\r\n    \"serialNumber\": \"C1234570\",\r\n    \"model\": \"MiddleWeight\",\r\n    \"maxWeightLimit\": 500,\r\n    \"batteryCapacity\": 60,\r\n    \"state\": \"LOADED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/droneservice/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"droneservice",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckMedication",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/droneservice/checkmeds/H123457",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"droneservice",
+						"checkmeds",
+						"H123457"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoadMedication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"droneId\": \"H123459\",\r\n    \"name\": \"Aspirin\",\r\n    \"weight\": 500,\r\n    \"code\": \"AS001\",\r\n    \"image\": \"https://url5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/droneservice/loadmeds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"droneservice",
+						"loadmeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckDroneAvailability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/droneservice/checkdrones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"droneservice",
+						"checkdrones"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -6,6 +6,8 @@ import jakarta.validation.constraints.Pattern;
 
 public class Medication {
 	
+	private String droneId;
+	
 	@Pattern(regexp="^[a-zA-Z0-9\\-_]+$", message="Field must only contain letters, numbers, hyphens and underscores")
 	private String name;
 	
@@ -51,6 +53,14 @@ public class Medication {
 
 	public void setImage(URL image) {
 		this.image = image;
+	}
+
+	public String getDroneId() {
+		return droneId;
+	}
+
+	public void setDroneId(String droneId) {
+		this.droneId = droneId;
 	}
 
 

@@ -1,6 +1,6 @@
 package com.hitachi.medication.delivery.query;
 
-public enum DroneFields {
+public enum EnumDroneFields {
 	serialNumber, 
 	model, 
 	maxWeightLimit, 
